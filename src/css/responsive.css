@@ -1,0 +1,87 @@
+@media screen and (max-width: 769px) { /*Apartir de qual tamanho*/
+    body{
+        background: rgb(78, 12, 12);
+    }
+ 
+    main::after{
+        background: linear-gradient(-233deg, #000 20%, rgba(8, 41, 233, 0.299) 70%) no-repeat;
+        width: 100vh;
+    }
+
+    main .personagem .imagem{
+        height: 85%;
+    }
+
+    .conteudo{
+        justify-content: flex-end;
+        left: 0;
+        top: -18%;
+        max-width: 480px;
+        padding: 20px;
+    }
+
+    .conteudo .nome-personagem{
+        font-size: 36px;
+    }
+
+    .conteudo .descricao{
+        max-width: 350px;
+    }
+
+    .botoes{
+        flex-direction: row;
+        align-items: flex-end;
+        width: 100%;
+        gap: 22px;
+    }
+
+    .botoes .botao img{
+        max-width: 60px;
+    }
+
+    .botoes .botao{
+        background: linear-gradient(90deg, rgba(120,14,206,1) 4%, rgba(163,19,40,1) 12%, rgba(115,79,113,1) 51%, rgba(15,158,171,1) 84%);
+    }
+
+    .botoes .botao.selecionado{
+        box-shadow: 0 0 10px rgb(32, 231, 6);
+    }
+
+}
+
+@media screen and (max-width: 472px) {
+    body{
+        background-color: rgb(134, 24, 24)
+    }
+
+    main .personagem .imagem{
+        height: auto;
+    }
+
+    main::after{
+        background: linear-gradient(-233deg, #000 2%, rgba(8, 41, 4233, 0.299) 2%) no-repeat;
+        width: 100vh;
+    }
+
+    .conteudo .logo{
+        width: 160px;
+        height: 140px;
+    }
+
+    .conteudo .nome-personagem{
+        font-size: 24px;
+    }
+
+    .botoes{
+        top: 0px;
+        gap: 12px;
+    }
+
+    .botoes .botao img{
+        max-width: 50px;
+    }
+
+    .conteudo .descricao{
+        font-size: 19px;
+    }
+}

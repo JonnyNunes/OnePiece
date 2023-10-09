@@ -1,0 +1,95 @@
+body{
+    background: linear-gradient(90deg, #082d68, #0a7a40);
+    overflow: hidden; /*Tirar a barra de rolagem (transbordar)*/
+}
+
+/*O que queremos fazer*/
+/*Vamos esconder*/
+main .personagem{
+    display: none; /*Propriedade de esconder o elemento*/
+}
+
+main .personagem.selecionado{ /*Duas classes no mesmo elemento (junta)*/
+    display: block; /*Padrão para o elemento aparecer*/
+}
+
+main .personagem .imagem{
+    width: 100%; /*Tamanho em relação ao pai (personagem)*/
+    height: 100%; /*Tamanho em relação ao pai (personagem)*/
+    object-fit: cover;
+} 
+
+main .personagem{
+    height: 100vh; /*(viewport height) definir a altura de janela de vizualização em relação ao dispositivo*/
+}
+
+.conteudo{
+    /*background-color: #082d68; Depurar o codigo, temporariamente */
+    position: absolute; /*Colocar por cima dos elementos*/
+    top: 0; /*Colocar no topo da página*/
+    left: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 380px;
+    z-index: 1;
+}
+
+.conteudo .nome-personagem{
+    color: white;
+    font-size: 48px;
+    font-family: "Secular One", sans-serif;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.conteudo .descricao{
+    color: rgb(253, 253, 253);
+    font-family: "Rubik";
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.conteudo .logo{
+    background-image: url(../img/logo/logo.png);
+    width: 180px;
+    height: 180px;
+    background-size: cover;
+}
+
+main::after{ /*Criar um elemento depois da tag main*/
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 80vw;
+    background: linear-gradient(-233deg, #000 35%, rgb(0,0,0,0) 50%) no-repeat; /*Com rgba é possível fazer uma opacidade*/
+}             
+
+.botoes{
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 168px;
+    gap: 28px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.botoes .botao{
+    border: none;
+    border-radius: 75%;
+    background: linear-gradient(60deg, rgba(120,14,206,1) 0%, rgba(19,25,163,1) 42%, rgba(171,15,131,1) 70%, rgba(17,184,218,1) 100%);
+    cursor: pointer;
+}
+
+.botoes .botao.selecionado{
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgb(6, 235, 235);
+}
