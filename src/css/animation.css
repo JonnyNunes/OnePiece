@@ -1,0 +1,42 @@
+@keyframes conteudo-container {
+    0%{
+        top: 20%;
+        max-width: 0;
+        min-height: 0;
+    }
+    30%{
+        top: 40%;
+        max-width: 65px;
+        min-height: 0;
+    }
+    60%{
+        top: 0%;
+        max-width: 130px;
+        min-height: 40vh;
+    }
+    80%{
+        max-width: 260px;
+        min-height: 60vh;
+    }
+}
+
+@keyframes botao-background {
+    0% {
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes text-background {
+    0%{
+        background-position: 0% 50%;
+    }
+    100%{
+        background-position: 100% 50%;
+    }
+}
